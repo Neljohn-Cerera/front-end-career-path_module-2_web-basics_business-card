@@ -1,0 +1,106 @@
+:root {
+  --clr-neutral-gray-100: hsl(0, 0%, 90%);
+  --clr-neutral-white: hsl(0, 0%, 100%);
+  --clr-accent-yellow-900: hsl(37, 98%, 53%);
+  --clr-accent-blue-900: hsl(221, 51%, 16%);
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: mymove 5s 1;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h3,
+p {
+  margin-bottom: 0.5em;
+}
+p {
+  color: var(--clr-neutral-gray-100);
+  opacity: 0.8;
+}
+h4 {
+  color: var(--clr-neutral-gray-100);
+  font-size: 1rem;
+  opacity: 0.9;
+}
+.text-center {
+  text-align: center;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  animation-timing-function: ease-out;
+  animation: myimage 6s 1;
+  border-radius: 50%;
+}
+
+.card {
+  width: 400px;
+  height: 150px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--clr-accent-blue-900);
+  color: var(--clr-neutral-gray-100);
+  box-shadow: 10px 10px 40px black;
+  transform: scale(1);
+  transition: transform 400ms;
+  border-radius: 20px;
+  animation-timing-function: ease-out;
+}
+
+.card:hover {
+  cursor: pointer;
+  box-shadow: 20px 20px 40px var(--clr-accent-yellow-900);
+  transform: scale(1.1);
+}
+
+@keyframes mymove {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes myimage {
+  from {
+    border-radius: 0px;
+  }
+  to {
+    border-radius: 50%;
+  }
+}
+
+/*
+Stretch goals:
+Find other ways you can personalize 
+the design of your business card, e.g.:
+- change the border(s)
+- add border radius
+- shuffle the layout
+- shadows        🤯
+- hover effects  🤯🤯
+- animations     🤯🤯🤯
+*/
