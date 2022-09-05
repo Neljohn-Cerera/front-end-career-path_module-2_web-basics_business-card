@@ -55,7 +55,7 @@ h4 {
 }
 
 .card {
-  width: minmax(400px, 90%);
+  width: min(100% - 1em, 400px);
   height: 150px;
   padding: 20px;
   display: flex;
